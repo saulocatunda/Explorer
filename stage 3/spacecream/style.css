@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 62.5 = 1rem = 10 px*/
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+body header {
+  width: 38.4rem;
+  height: 27.9rem;
+  background-color: #8e9aaf;
+  filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+}
+
+body header img {
+  width: 13.7rem;
+  height: 13.7rem;
+  left: 12.4rem;
+  top: 3.2rem;
+  margin: 3.2rem 12.3rem 3.2rem 12.4rem;
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+body header h1 {
+  font-family: 'Staatliches', cursive;
+  font-style: normal;
+  color: #ffffff;
+  background-color: #cbc0d3;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 0.8rem 8.6rem 0.7rem 8.7rem;
+}
+
+body .wrapper {
+  width: 38.4rem;
+  height: 175rem;
+  background-color: #eff1ff;
+  padding: 1.4rem 3.2rem 6rem;
+}
+
+body p {
+  font-family: 'Palanquin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  align-items: center;
+  color: #23053a;
+}
+
+body .menu img {
+  margin-bottom: 3.2rem;
+}
+
+body .menu {
+  margin-top: 6.3rem;
+}
+
+/* Pendente, margin bottom da última imagem*/
+body .menu .menu-picole img {
+  margin-bottom: 6rem;
+}
+
+body .menu legend {
+  font-family: 'Staatliches', cursive;
+  color: #4a4e69;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  padding: 0.1rem 2.3rem;
+  background-color: #feeafa;
+  border-radius: 2rem;
+  width: 11.2rem;
+  height: 3.5rem;
+  position: absolute;
+  margin: 1.6rem 1.6rem 19.9rem 19.2rem;
+}
