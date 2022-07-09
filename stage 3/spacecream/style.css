@@ -9,6 +9,8 @@
   font-size: 62.5%;
 }
 
+
+
 body {
   font-size: 1.6rem;
   display: flex;
@@ -71,7 +73,6 @@ body .menu {
   margin-top: 6.3rem;
 }
 
-/* Pendente, margin bottom da última imagem*/
 body .menu .menu-picole img {
   margin-bottom: 6rem;
 }
@@ -91,4 +92,11 @@ body .menu legend {
   height: 3.5rem;
   position: absolute;
   margin: 1.6rem 1.6rem 19.9rem 19.2rem;
+}
+
+/* Animação */
+
+body .wrapper .menu img {
+  transition-delay: 1s;
+  transition-property: opacity(0);
 }
