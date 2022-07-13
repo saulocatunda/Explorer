@@ -5,11 +5,13 @@
 }
 
 :root {
+  --bk-color-light: #cbc0d3;
+  --bk-color-dark: #8e9aaf;
+  --bk-color-soft: #eff1ff;
+  --text-color-dark: #4a4e69;
   /* 62.5 = 1rem = 10 px*/
   font-size: 62.5%;
 }
-
-
 
 body {
   font-size: 1.6rem;
@@ -22,8 +24,14 @@ body {
 body header {
   width: 38.4rem;
   height: 27.9rem;
-  background-color: #8e9aaf;
+  background-color: var(--bk-color-dark);
   filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+}
+
+body header img,
+body .menu img {
+  width: 100%;
+  height: auto;
 }
 
 body header img {
@@ -39,7 +47,7 @@ body header h1 {
   font-family: 'Staatliches', cursive;
   font-style: normal;
   color: #ffffff;
-  background-color: #cbc0d3;
+  background-color: var(--bk-color-light);
   font-weight: 400;
   font-size: 4rem;
   line-height: 3.4rem;
@@ -51,7 +59,7 @@ body header h1 {
 body .wrapper {
   width: 38.4rem;
   height: 175rem;
-  background-color: #eff1ff;
+  background-color: var(--bk-color-soft);
   padding: 1.4rem 3.2rem 6rem;
 }
 
@@ -66,20 +74,29 @@ body p {
 }
 
 body .menu img {
+  object-fit: cover;
   margin-bottom: 3.2rem;
+  animation: downup 800ms;
+  transition: all 200ms;
+}
+
+body .menu img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 body .menu {
   margin-top: 6.3rem;
+  position: relative;
 }
 
 body .menu .menu-picole img {
   margin-bottom: 6rem;
 }
 
-body .menu legend {
+body .menu h2 {
   font-family: 'Staatliches', cursive;
-  color: #4a4e69;
+  color: var(--text-color-dark);
   text-transform: uppercase;
   font-size: 2rem;
   line-height: 3.4rem;
@@ -91,12 +108,32 @@ body .menu legend {
   width: 11.2rem;
   height: 3.5rem;
   position: absolute;
-  margin: 1.6rem 1.6rem 19.9rem 19.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  right: 1rem;
+  top: 1rem;
+  animation: updown 800ms;
+  transition: 300ms;
 }
-
 /* Animação */
-
-body .wrapper .menu img {
-  transition-delay: 1s;
-  transition-property: opacity(0);
+@keyframes downup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes updown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
