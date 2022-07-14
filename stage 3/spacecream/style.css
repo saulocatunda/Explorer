@@ -56,7 +56,9 @@ body header h1 {
   padding: 0.8rem 8.6rem 0.7rem 8.7rem;
 }
 
-body .wrapper {
+main {
+  display: grid;
+  gap: 6.3rem;
   width: 38.4rem;
   height: 175rem;
   background-color: var(--bk-color-soft);
@@ -85,16 +87,17 @@ body .menu img:hover {
   filter: brightness(1.2);
 }
 
-body .menu {
-  margin-top: 6.3rem;
+.menu {
+  /*margin-top: 6.3rem;*/
   position: relative;
 }
-
+/*
 body .menu .menu-picole img {
   margin-bottom: 6rem;
 }
-
+*/
 body .menu h2 {
+  position: absolute;
   font-family: 'Staatliches', cursive;
   color: var(--text-color-dark);
   text-transform: uppercase;
@@ -107,14 +110,12 @@ body .menu h2 {
   border-radius: 2rem;
   width: 11.2rem;
   height: 3.5rem;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
-  right: 1rem;
   top: 1rem;
+  right: 1rem;
+  z-index: 1;
   animation: updown 800ms;
   transition: 300ms;
+  
 }
 /* Animação */
 @keyframes downup {
