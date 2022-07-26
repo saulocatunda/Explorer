@@ -9,7 +9,7 @@
   --bk-color-dark: #8e9aaf;
   --bk-color-soft: #eff1ff;
   --text-color-dark: #4a4e69;
-  /* 62.5 = 1rem = 10 px*/
+  /* 62.5 / 1rem = 10 px*/
   font-size: 62.5%;
 }
 
