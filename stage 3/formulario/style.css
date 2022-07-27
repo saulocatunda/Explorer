@@ -6,8 +6,8 @@
 
 :root {
   --bk-color-grey: hsla(228, 15%, 38%, 1);
-  --color-red:  hsla(348, 100%, 66%, 1);
-  --color-white:  hsla(0, 0%, 94%, 1);
+  --color-red: hsla(348, 100%, 66%, 1);
+  --color-white: hsla(0, 0%, 94%, 1);
   --color-light-grey: hsla(258, 14%, 77%, 1);
   font-size: 62.5%;
 }
@@ -58,16 +58,13 @@ main {
 
 form {
   border-radius: 2rem 2rem 0 0;
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 6.4rem;
-  
+  display: flex;
+  flex-direction: column;
 }
 
-fieldset {
-  border: none;
-}
-
-fieldset h2 {
+fieldset legend {
   font-family: 'Staatliches', cursive;
   font-weight: 400;
   font-size: 2.4rem;
@@ -82,11 +79,21 @@ fieldset span {
   color: var(--color-light-grey);
 }
 
+fieldset {
+  border: none;
+}
 
 .input-wrapper {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
 }
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+}
+
 
 .input-wrapper label {
   font-family: 'Poppins', sans-serif;
@@ -95,15 +102,29 @@ fieldset span {
   line-height: 2.4rem;
   color: var(--bk-color-grey);
 }
+
+
 .input-wrapper input {
-  width: 30rem;
+  
   height: 5.6rem;
   border-radius: 0.8rem;
-  border: 1px solid #E6E6F0;
+  border: 1px solid #e6e6f0;
+}
+
+.col-2 {
+  display: flex;
+}
+
+.col-3 {
+  display: flex;
+  gap: 1rem;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
 }
 
 footer {
-  
   width: 75rem;
   height: 16rem;
   background: var(--bk-color-grey);
