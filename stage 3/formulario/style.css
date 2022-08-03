@@ -71,6 +71,20 @@ fieldset legend {
   line-height: 3.4rem;
   color: var(--bk-color-grey);
 }
+
+fieldset h2 {
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  color: var(--bk-color-grey);
+}
+
+fieldset h2 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
 fieldset span {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -91,9 +105,12 @@ fieldset {
 .fieldset-wrapper {
   display: flex;
   flex-direction: column;
-  
 }
 
+main legend {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
 
 .input-wrapper label {
   font-family: 'Poppins', sans-serif;
@@ -103,16 +120,27 @@ fieldset {
   color: var(--bk-color-grey);
 }
 
-
 .input-wrapper input {
-  
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
   height: 5.6rem;
   border-radius: 0.8rem;
   border: 1px solid #e6e6f0;
 }
 
+.input-wrapper #time1-begin,
+#time1-end,
+#time2-begin,
+#time2-end {
+  width: 14rem;
+}
+
 .col-2 {
   display: flex;
+  gap: 2.2rem;
+}
+.col-2 > div {
+  width: 100%;
 }
 
 .col-3 {
@@ -122,6 +150,7 @@ fieldset {
 
 .col-3 > div:nth-child(1) {
   width: 100%;
+  margin-right: 3.2rem;
 }
 
 footer {
@@ -132,7 +161,12 @@ footer {
 }
 
 footer button {
+  font-family: 'Staatliches', cursive;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 400;
   background: var(--color-red);
+  color: white;
   justify-content: center;
   align-items: center;
   padding: 1.5rem 4rem;

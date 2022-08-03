@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Formulário</title>
   </head>
+
   <body>
     <header>
       <h1>Mentoria</h1>
@@ -22,14 +23,14 @@
           <legend>Informações pessoais</legend>
           <div class="col-2">
             <div class="input-wrapper">
-              <label for="firstname-input">Nome:</label>
+              <label for="firstname-input">Nome</label>
               <input type="text" id="firstname-input" required="required" />
-              <div class="input-wrapper">
-                <label for="lastname-input">Sobrenome:</label>
-                <input type="text" id="lastname-input" required="required" />
-              </div>
             </div>
-            /* Parei aqui. */
+
+            <div class="input-wrapper">
+              <label for="lastname-input">Sobrenome</label>
+              <input type="text" id="lastname-input" required="required" />
+            </div>
           </div>
         </fieldset>
 
@@ -37,7 +38,7 @@
           <div class="fieldset-wrapper">
             <div class="input-wrapper">
               <label for="email-input"
-                >Email: <span>(digite um email válido)</span></label
+                >Email <span>(digite um email válido)</span></label
               >
               <input type="email" id="email-input" required="required" />
             </div>
@@ -45,7 +46,7 @@
               <label for="password-input"
                 >Senha <span>(mínimo de 6 caracteres)</span></label
               >
-              <input type="password" id="password-input" />
+              <input type="password" id="password-input" minlength="6" />
             </div>
             <legend>Informações do Mentor</legend>
             <div class="input-wrapper">
@@ -60,7 +61,7 @@
         <fieldset>
           <legend>Seus horários disponíveis</legend>
           <div class="fieldset-wrapper">
-            <legend>Primeira Mentoria</legend>
+            <h2>Primeira Mentoria</h2>
             <div class="col-3">
               <div class="input-wrapper">
                 <label for="date1-mentor-input">
@@ -81,7 +82,7 @@
 
           <div class="fieldset-wrapper">
             <div class="input-wrapper">
-              <legend>Segunda Mentoria</legend>
+              <h2>Segunda Mentoria</h2>
               <div class="col-3">
                 <div class="input-wrapper">
                   <label for="date2-mentor-input">
