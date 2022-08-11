@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-darkblue: hsl(218, 23%, 21%);
+  --color-lightblue: hsl(201, 41%, 82%);
+  --color-red: hsl(6, 89%, 69%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário Avançado</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>avalie a sua mentoria</h1>
+      <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+      <h2>Informações pessoais</h2>
+    </header>
+
+    <form id="my-form">
+      <fieldset>
+        <fieldset class="fieldset-wrapper">
+          <div class="input-wrapper">
+            <label for="firstName-input">Nome</label>
+            <input type="text" id="firstName-input" />
+          </div>
+        </fieldset>
+
+        <div class="input-wrapper">
+          <label for="lastName-input">Sobrenome</label>
+          <input type="text" id="lastName-input" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="email-input">Email</label>
+          <input type="email" id="email-input" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <h2>Informações do mentor</h2>
+        <div class="input-wrapper">
+          <label for="mentor-input">Selecione quem foi o seu mentor</label>
+          <select id="mentor-input">
+            <option value=""></option>
+          </select>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
