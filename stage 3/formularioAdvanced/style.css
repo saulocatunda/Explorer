@@ -47,6 +47,31 @@ header p {
   line-height: 2.4rem;
 }
 
+
+body legend:nth-child(1) {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+
+body legend {
+  margin: 0 auto;
+  font-family: 'Staatliches', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: #253b51;
+}
+
+body span {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #c1bccc;
+}
+
 header img {
   margin: 0 0 3.2rem 0;
   width: 22.5rem;
@@ -72,6 +97,8 @@ header .top h2 {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
   width: 75rem;
   height: 107.5rem;
   background-color: var(--color-white);
@@ -83,3 +110,128 @@ fieldset {
   border: none;
 }
 
+fieldset:first-child {
+  margin-top: 1.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+form .input-wrapper label {
+  
+  margin-bottom: 1.5rem;
+}
+
+body label {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #4e4958;
+}
+
+body input,
+textarea {
+  border: 1px solid #e6e6f0;
+  border-radius: 0.8rem;
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 0.8rem;
+}
+
+body textarea {
+  height: 16.6rem;
+  border-radius: 0.8rem;
+  resize: none;
+}
+
+body fieldset #mentor-input {
+  width: 30rem;
+  height: 5.5rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  border: 1px solid #e6e6f0;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 3rem 0 0 0;
+  
+}
+
+.checkbox-wrapper input {
+  
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus label::before {
+  border: 1px solid black;
+}
+
+.col-2 {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.col-2 > div {
+  width: 100%;
+}
+
+.input-wrapper #date-input {
+  width: 30rem;
+}
+
+.col-3 {
+  display: flex;
+  gap: 1rem;
+}
+
+.col-3 > div {
+  width: 100%;
+}
+
+.col-3 > div:nth-child(1) {
+  margin-right: 2.2rem;
+}
+
+footer button {
+  margin-top: 6.3rem;
+  background-color: var(--color-red);
+  height: 5rem;
+  border-radius: 0.8rem;
+  padding: 1.25rem 2.8rem ;
+  width: 100%;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  border: none;
+  color: var(--color-white);
+  
+}

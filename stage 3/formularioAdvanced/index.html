@@ -30,14 +30,16 @@
     <form id="my-form">
       <fieldset>
         <div class="fieldset-wrapper">
-          <div class="input-wrapper">
-            <label for="firstName-input">Nome</label>
-            <input type="text" id="firstName-input" required />
-          </div>
+          <div class="col-2">
+            <div class="input-wrapper">
+              <label for="firstName-input">Nome</label>
+              <input type="text" id="firstName-input" required />
+            </div>
 
-          <div class="input-wrapper">
-            <label for="lastName-input">Sobrenome</label>
-            <input type="text" id="lastName-input" required />
+            <div class="input-wrapper">
+              <label for="lastName-input">Sobrenome</label>
+              <input type="text" id="lastName-input" required />
+            </div>
           </div>
 
           <div class="input-wrapper">
@@ -55,6 +57,7 @@
           <div class="input-wrapper">
             <label for="mentor-input">Selecione quem foi o seu mentor</label>
             <select id="mentor-input">
+              <option value="none">Por favor, escolha</option>
               <option value="mayk">Maykão</option>
               <option value="jack">Jackeliny</option>
               <option value="diogo">Diogo</option>
@@ -66,12 +69,12 @@
             <textarea id="feedback-input" cols="30" rows="10"></textarea>
           </div>
 
-          <div class="intput-wrapper">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="checkbox-input" />
             <label for="checkbox-input"
               >Todas as minhas dúvidas foram esclarecidas durante a
               mentoria.</label
             >
-            <input type="checkbox" id="checkbox-input" />
           </div>
         </div>
       </fieldset>
@@ -79,19 +82,21 @@
       <fieldset>
         <legend>Agendando próxima mentoria</legend>
         <div class="fieldset-wrapper">
-          <div class="input-wrapper">
-            <label for="date-input">Data <span>(DD/MM/AAAA)</span></label>
-            <input type="date" id="date-input" />
-          </div>
+          <div class="col-3">
+            <div class="input-wrapper">
+              <label for="date-input">Data <span>(DD/MM/AAAA)</span></label>
+              <input type="date" id="date-input" />
+            </div>
 
-          <div class="input-wrapper">
-            <label for="initialHour-input">Das</label>
-            <input type="time" id="initialHour-input" />
-          </div>
+            <div class="input-wrapper">
+              <label for="initialHour-input">Das</label>
+              <input type="time" id="initialHour-input" />
+            </div>
 
-          <div class="input-wrapper">
-            <label for="endHour-input">Até</label>
-            <input type="time" id="endHour-input" />
+            <div class="input-wrapper">
+              <label for="endHour-input">Até</label>
+              <input type="time" id="endHour-input" />
+            </div>
           </div>
         </div>
       </fieldset>
