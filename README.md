@@ -3,5 +3,8 @@ Olá! Esse é meu repositório que contém todos os meus códigos escritos por m
 <div>
 • Tempo Total Programando: Projetos Explorer
 
-  [![wakatime](https://wakatime.com/badge/github/saulocatunda/Explorer.svg)](https://wakatime.com/badge/github/saulocatunda/Explorer)
+ [![wakatime](https://wakatime.com/badge/github/saulocatunda/Explorer.svg)](https://wakatime.com/badge/github/saulocatunda/Explorer)
+  
+• Dashboard Explorer
+https://wakatime.com/@saulocatunda/projects/ihdnwffbmk?start=2022-08-27&end=2022-09-02
 </div>
