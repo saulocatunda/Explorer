@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-darkblue: hsl(218, 23%, 21%);
+  --color-lightblue: hsl(201, 41%, 82%);
+  --color-red: hsl(6, 89%, 69%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-lightblue);
+}
+
+header {
+  color: var(--color-white);
+  background-color: var(--color-darkblue);
+  width: 144rem;
+  height: 46.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 10.7rem 57.9rem 0;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 4.5rem;
+}
+
+header p {
+  margin: 0 0 2rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+body legend:nth-child(1) {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+body legend {
+  margin: 0 auto;
+  font-family: 'Staatliches', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: #253b51;
+}
+
+body span {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #c1bccc;
+}
+
+header img {
+  margin: 0 0 3.2rem 0;
+  width: 22.5rem;
+  height: 10rem;
+}
+
+header .top {
+  background-color: var(--color-red);
+  width: 75rem;
+  height: 109.5rem;
+  border-radius: 2rem 2rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header .top h2 {
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75rem;
+  height: 107.5rem;
+  background-color: var(--color-white);
+  border-radius: 0 0 2rem 2rem;
+  padding: 3.1rem 6.4rem 0;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset:first-child {
+  margin-top: 1.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-wrapper input {
+  margin: 1rem 0;
+}
+
+body label {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #4e4958;
+}
+
+body input,
+textarea {
+  border: 1px solid #e6e6f0;
+  border-radius: 0.8rem;
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 0.8rem;
+}
+
+body textarea {
+  margin-top: 1.5rem;
+  height: 16.6rem;
+  border-radius: 0.8rem;
+  resize: none;
+}
+
+body fieldset #mentor-input {
+  margin: 1rem 0;
+  width: 30rem;
+  height: 5.5rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  border: 1px solid #e6e6f0;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 3rem 0 0 0;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus label::before {
+  border: 1px solid black;
+}
+
+.col-2 {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.col-2 > div {
+  width: 100%;
+}
+
+.input-wrapper #date-input {
+  width: 30rem;
+}
+
+.col-3 {
+  display: flex;
+  gap: 1rem;
+}
+
+.col-3 > div {
+  width: 100%;
+}
+
+.col-3 > div:nth-child(1) {
+  margin-right: 2.2rem;
+}
+
+footer button {
+  margin: 6.3rem 0;
+  background-color: var(--color-red);
+  height: 5rem;
+  border-radius: 0.8rem;
+  padding: 1.25rem 2.8rem;
+  width: 100%;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  border: none;
+  color: var(--color-white);
+}
