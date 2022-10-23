@@ -83,7 +83,7 @@ while (Number(result) != randomNumber) {
 alert(
   `Parabéns, você acertou o número. Número sorteado = ${randomNumber}, em ${attempts} tentativas.`
 )
-*/
+
 
 let option
 let items = []
@@ -101,23 +101,49 @@ while (option != 3) {
 
   switch (option) {
     case 1:
+      items.push(prompt('Digite o nome do item:  '))
       break
     case 2:
+      if (items.length == 0) {
+        alert('Não existem itens na lista')
+      } else {
+        alert('Itens: ' + items)
+      }
       break
     case 3:
+      alert('Tchau')
       break
     default:
+      alert('Opção inválida, tente novamente')
       break
   }
-
-  if (option == 1) {
-    items.push(prompt('Digite o nome do item:  '))
-  } else if (option == 2) {
-    if (items.length == 0) {
-      alert('Não existem itens na lista')
-    } else {
-      alert('Itens: ' + items)
-    }
-  }
 }
-alert('Tchau')
+
+*/
+
+const patients = [
+  {
+    name: 'Luiz',
+    age: 20,
+    weight: 100,
+    height: 190
+  },
+  {
+    name: 'Marcia',
+    age: 40,
+    weight: 70,
+    height: 170
+  },
+  {
+    name: 'Saulo',
+    age: 30,
+    weight: 90,
+    height: 184
+  }
+]
+
+for (let index = 0; index < patients.length; index++) {
+  patientsNames[index] = patients[index].name
+}
+
+alert(patientsNames)
