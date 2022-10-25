@@ -92,7 +92,7 @@ while (option != 3) {
   option = Number(
     prompt(`
   Olá usuário! Digite a opção desejada.
-  
+
   1. Cadastrar um item na lista
   2. Mostrar itens cadastrados
   3. Sair do programa
@@ -118,8 +118,25 @@ while (option != 3) {
       break
   }
 }
-
 */
+
+// let patientsNames = []
+// let patientsAge = []
+// let patientsWeight = []
+
+// for (let index = 0; index < patients.length; index++) {
+//   patientsNames[index] = patients[index].name
+// }
+
+// for (const patient of patients) {
+//   patientsNames.push(patient.name)
+//   patientsAge.push(patient.age)
+//   patientsWeight.push(patient.weight)
+// }
+
+// alert(
+//   `${patientsNames} tem ${patientsAge} anos de idade e pesam ${patientsWeight} kg respectivamente.`
+// )
 
 const patients = [
   {
@@ -142,8 +159,4 @@ const patients = [
   }
 ]
 
-for (let index = 0; index < patients.length; index++) {
-  patientsNames[index] = patients[index].name
-}
-
-alert(patientsNames)
+function IMC (weight, age)
