@@ -159,4 +159,15 @@ const patients = [
   }
 ]
 
-function IMC (weight, age)
+function IMC(weight, height) {
+  return (weight / (height / 100) ** 2).toFixed(2)
+}
+
+function printIMC(patient) {
+  return ` O IMC de ${patient.name} é de ${IMC(patient.weight, patient.height)}`
+}
+
+for (let patient of patients) {
+  let IMCmessage = printIMC(patient)
+  alert(IMCmessage)
+}
