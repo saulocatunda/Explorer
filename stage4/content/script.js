@@ -137,7 +137,7 @@ while (option != 3) {
 // alert(
 //   `${patientsNames} tem ${patientsAge} anos de idade e pesam ${patientsWeight} kg respectivamente.`
 // )
-
+/*
 const patients = [
   {
     name: 'Luiz',
@@ -171,3 +171,4 @@ for (let patient of patients) {
   let IMCmessage = printIMC(patient)
   alert(IMCmessage)
 }
+*/
