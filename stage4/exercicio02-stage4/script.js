@@ -36,13 +36,13 @@ for (const student of students) {
       `A média do(a) aluno(a) ${student.name} é de: ${calculatorAverage(
         student.firstPoint,
         student.secondPoint
-      )}\nParabéns, você passou.`
+      )}\nParabéns,${student.name}! você foi aprovado(a) no concurso!`
     )
   } else
     alert(
       `A média do(a) aluno(a) ${student.name} é de: ${calculatorAverage(
         student.firstPoint,
         student.secondPoint
-      )}\nQue pena, tente novamente.`
+      )}\nQue pena,${student.name}! Tente novamente.`
     )
 }

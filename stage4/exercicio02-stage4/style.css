@@ -11,4 +11,11 @@
 body {
   font-size: 1.6rem;
   background-color: rgb(31, 0, 59);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: blanchedalmond;
+  margin: 50vh 50vw;
 }
