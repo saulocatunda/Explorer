@@ -21,8 +21,21 @@
   <body>
     <div class="container">
       <main class="card">
-        <form action="">
+        <form>
           <h1 class="title">Cálculo de IMC</h1>
+          <div class="input-wrapper">
+            <label for="weight">Peso (kg)</label>
+            <input id="weight" type="text" placeholder="Exp: 60" />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="height">Altura (cm)</label>
+            <input id="height" type="text" placeholder="Exp: 170"/>
+          </div>
+          <button type="submit">
+            Calcular IMC
+            <img src="assets/arrow.svg" alt="Seta para direita" />
+          </button>
         </form>
       </main>
     </div>
