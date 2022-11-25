@@ -91,7 +91,7 @@ form input::placeholder {
   margin-top: 1.6rem;
 }
 
-button {
+form button {
   margin-top: 3.2rem;
   padding: 1.6rem;
   width: 100%;
@@ -108,9 +108,72 @@ button {
   font-weight: bold;
 
   cursor: pointer;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
-button:hover {
+form button:hover {
   background: var(--bg-button-hover);
+}
+
+/*Modal*/
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+
+  transition: transform 0.3s;
+}
+
+.modal button:hover {
+  transform: scale(1.2);
+}
+
+/*Alert error*/
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--bg-error);
+  text-align: center;
+  font-weight: bold;
+  color: var(--tt-error);
+  padding: 0.8rem 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-4rem);
+  transition: transform 0.5s;
 }
