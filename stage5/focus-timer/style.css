@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-color: 260;
+  --bg-color: #121214;
+  --primary-color: hsla(var(--base-color), 100%, 63%);
+  --bg--primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.hide {
+  display: none;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+  fill: var(--primary-color);
+}
+
+#timer {
+  font-size: 8.8rem;
+  display: flex;
+}
+
+#control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.8rem;
+  background-color: var(--bg--primary-light);
+  border-radius: 9999px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
