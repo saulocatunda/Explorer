@@ -13,6 +13,8 @@ body {
   height: 100vh;
   display: grid;
   place-content: center;
+  background-size: 200% 200%;
+  animation: backgroundRotate 3s ease-in-out infinite;
 }
 
 h1,
@@ -27,8 +29,8 @@ img {
 }
 
 .screen1 img:hover {
-  transform: scale(1.1);
-  transition: 1s;
+  animation: shake 0.4s forwards 0s infinite;
+  /* animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);  */
 }
 
 h1 {
@@ -90,4 +92,61 @@ button {
   border: none;
   border-radius: 0.4rem;
   margin: 1.7rem 6.3rem;
+}
+
+@keyframes shake {
+  0%,
+  23% {
+    transform: translate3d(3px, 0px, 0);
+  }
+  2% {
+    transform: rotate(-2deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  48%,
+  73% {
+    transform: translate3d(3px, 0px, 0);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+
+  98% {
+    transform: translate3d(3px, 0px, 0);
+  }
+
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes backgroundRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
+
+  75% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
