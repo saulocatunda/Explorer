@@ -26,6 +26,11 @@ img {
   cursor: pointer;
 }
 
+.screen1 img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
