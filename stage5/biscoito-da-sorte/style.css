@@ -30,7 +30,11 @@ img {
 
 .screen1 img:hover {
   animation: shake 0.4s forwards 0s infinite;
-  /* animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);  */
+}
+
+.screen2 #randomMessage:hover {
+  position: relative;
+  animation: messagerAppear 3s;
 }
 
 h1 {
@@ -92,6 +96,16 @@ button {
   border: none;
   border-radius: 0.4rem;
   margin: 1.7rem 6.3rem;
+}
+
+@keyframes messagerAppear {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes shake {

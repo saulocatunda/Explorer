@@ -15,13 +15,17 @@
       <div class="screen1">
         <h1>Qual é a sua sorte de hoje?</h1>
         <p>Abra o biscoito e descubra!</p>
-        <img src="assets/cookie-closed.svg" alt="biscoito da sorte fechado" />
+        <img
+          id="closed-cookie"
+          src="assets/cookie-closed.svg"
+          alt="biscoito da sorte fechado"
+        />
       </div>
       <div class="screen2 hide">
         <h1>Aqui está a sua sorte de hoje:</h1>
-        <p><span>Mensagem</span></p>
+        <p><span id="randomMessage">Mensagem</span></p>
         <img src="assets/cookie-opened.svg" alt="biscoito da sorte aberto" />
-        <button>Abrir outro biscoito</button>
+        <button id="buttonReset">Abrir outro biscoito</button>
       </div>
     </main>
   </body>
