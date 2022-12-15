@@ -32,11 +32,6 @@ img {
   animation: shake 0.4s forwards 0s infinite;
 }
 
-.screen2 #randomMessage:hover {
-  position: relative;
-  animation: messagerAppear 3s;
-}
-
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -61,6 +56,10 @@ span {
   background-color: #e4edf1;
   padding: 1rem 1rem;
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(85, 85, 85, 0.5);
+}
+
+p {
+  animation: messager-appear 2s ease-in-out 0s;
 }
 
 main .hide {
@@ -98,13 +97,16 @@ button {
   margin: 1.7rem 6.3rem;
 }
 
-@keyframes messagerAppear {
-  from {
-    transform: translateY(100%);
+@keyframes messager-appear {
+  0% {
+    opacity: 0.5;
+    transform: translate(0px, 15rem) scale(0.3);
+  }
+  1% {
   }
 
-  to {
-    transform: translateY(0%);
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 
