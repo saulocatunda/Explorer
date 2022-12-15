@@ -47,7 +47,7 @@ p {
   margin: 1.4rem 0 2rem;
 }
 
-span {
+#randomMessage {
   font-family: 'Dancing Script', cursive;
   font-weight: 400;
   font-size: 2.4rem;
@@ -58,8 +58,8 @@ span {
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(85, 85, 85, 0.5);
 }
 
-p {
-  animation: messager-appear 2s ease-in-out 0s;
+#randomMessage {
+  animation: messager-appear 1.5s ease-in-out 0s;
 }
 
 main .hide {
