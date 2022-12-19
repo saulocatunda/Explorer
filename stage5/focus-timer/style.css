@@ -14,10 +14,17 @@
 }
 
 body {
+  display: grid;
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+main {
+  justify-self: center;
+  align-self: end;
 }
 
 .hide {
@@ -30,18 +37,32 @@ body {
   fill: var(--primary-color);
 }
 
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
 #timer {
-  font-size: 8.8rem;
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
   display: flex;
+  padding-bottom: 1.6rem;
 }
 
 #control {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3.8rem;
+  gap: 3.2rem;
   background-color: var(--bg--primary-light);
   border-radius: 9999px;
+
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem);
+}
+
+footer {
+  justify-self: end;
+  align-self: end;
+  padding: 0 2rem 3.2rem 0;
 }
 
 button {
