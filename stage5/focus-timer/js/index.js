@@ -1,38 +1,19 @@
+// EcmaScript - ES6 Modules
+// default import, nome pode mudar
+import resetControls from './controls.js'
+// named import, nome exato
+import { countdown, resetTimer, updateTimerDisplay } from './timer.js'
+
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
 const buttonStop = document.querySelector('.stop')
 const buttonSet = document.querySelector('.set')
 const buttonSoundOn = document.querySelector('.sound-on')
 const buttonSoundOff = document.querySelector('.sound-off')
-let minutes
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
-console.log(minutesDisplay.textContent)
-
-function countdown() {
-  setTimeout(() => {
-    let minutesCountdown = Number(minutesDisplay.textContent)
-    let secondsCountdown = Number(secondsDisplay.textContent)
-
-    secondsDisplay.textContent = String(secondsCountdown - 1).padStart(2, '0')
-
-    if (minutesCountdown <= 0) {
-      buttonStop.classList.add('hide')
-      buttonPlay.classList.remove('hide')
-      buttonPause.classList.add('hide')
-      buttonSet.classList.remove('hide')
-      return
-    }
-
-    if (secondsCountdown <= 0) {
-      secondsCountdown = 60
-      minutesDisplay.textContent = String(minutesCountdown - 1).padStart(2, '0')
-    }
-
-    secondsDisplay.textContent = String(secondsCountdown - 1).padStart(2, '0')
-    countdown()
-  }, 1000)
-}
+let timeCountdownOut
+let minutesInitial = Number(minutesDisplay.textContent)
 
 buttonPlay.addEventListener('click', () => {
   buttonPlay.classList.toggle('hide')
@@ -45,13 +26,13 @@ buttonPlay.addEventListener('click', () => {
 buttonPause.addEventListener('click', () => {
   buttonPlay.classList.toggle('hide')
   buttonPause.classList.toggle('hide')
+  clearTimeout(timeCountdownOut)
 })
 
 buttonStop.addEventListener('click', () => {
-  buttonStop.classList.add('hide')
-  buttonPlay.classList.remove('hide')
-  buttonPause.classList.add('hide')
-  buttonSet.classList.remove('hide')
+  resetControls()
+  resetTimer()
+  clearTimeout(timeCountdownOut)
 })
 
 buttonSoundOn.addEventListener('click', () => {
@@ -65,6 +46,11 @@ buttonSoundOff.addEventListener('click', () => {
 })
 
 buttonSet.addEventListener('click', () => {
-  minutes = prompt('Quantos minutos?')
-  minutesDisplay.textContent = String(minutes).padStart(2, '0')
+  let newMinutesInitial = prompt('Quantos minutos?')
+  if (!newMinutesInitial) {
+    resetTimer()
+    return
+  }
+  minutesInitial = newMinutesInitial
+  updateTimerDisplay(minutesInitial, 0)
 })
