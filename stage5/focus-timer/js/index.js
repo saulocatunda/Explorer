@@ -1,8 +1,8 @@
 // EcmaScript - ES6 Modules
 // default import, nome pode mudar
-import resetControls from './controls.js'
+import Controls from './controls.js'
 // named import, nome exato
-import { countdown, resetTimer, updateTimerDisplay } from './timer.js'
+import Timer from './timer.js'
 
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
@@ -12,27 +12,36 @@ const buttonSoundOn = document.querySelector('.sound-on')
 const buttonSoundOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
-let timeCountdownOut
-let minutesInitial = Number(minutesDisplay.textContent)
+
+
+
+// Modulos
+const controls = Controls({
+  buttonPause,
+  buttonPlay,
+  buttonSet,
+  buttonStop
+})
+
+const timer = Timer({
+  minutesDisplay,
+  secondsDisplay,
+  resetControls: controls.reset
+})
 
 buttonPlay.addEventListener('click', () => {
-  buttonPlay.classList.toggle('hide')
-  buttonPause.classList.toggle('hide')
-  buttonStop.classList.remove('hide')
-  buttonSet.classList.add('hide')
-  countdown()
+  controls.play()
+  timer.countdown()
 })
 
 buttonPause.addEventListener('click', () => {
-  buttonPlay.classList.toggle('hide')
-  buttonPause.classList.toggle('hide')
-  clearTimeout(timeCountdownOut)
+  controls.pause()
+  timer.hold()
 })
 
 buttonStop.addEventListener('click', () => {
-  resetControls()
-  resetTimer()
-  clearTimeout(timeCountdownOut)
+  controls.reset()
+  timer.reset()
 })
 
 buttonSoundOn.addEventListener('click', () => {
@@ -46,11 +55,11 @@ buttonSoundOff.addEventListener('click', () => {
 })
 
 buttonSet.addEventListener('click', () => {
-  let newMinutesInitial = prompt('Quantos minutos?')
+  let newMinutesInitial = controls.getMinutes()
   if (!newMinutesInitial) {
-    resetTimer()
+    timer.reset()
     return
   }
-  minutesInitial = newMinutesInitial
-  updateTimerDisplay(minutesInitial, 0)
+  timer.updateDisplay(newMinutesInitial, 0)
+  timer.updateMinutes(newMinutesInitial)
 })
