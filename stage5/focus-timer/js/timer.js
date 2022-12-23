@@ -1,3 +1,6 @@
+import Sound from './sounds.js'
+const sound = Sound()
+
 // Factory
 export default function Timer({
   //Injeção de dependências
@@ -30,6 +33,7 @@ export default function Timer({
       if (isFinished) {
         resetControls()
         updateDisplay()
+        sound.endTime()
         return
       } else if (secondsCountdown <= 0) {
         secondsCountdown = 60
