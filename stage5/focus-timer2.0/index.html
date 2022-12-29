@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    </style>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -10,18 +13,42 @@
   <body>
     <main>
       <div class="timer">
-        <span class="minutes">02</span>
-        <span>:</span>
-        <span class="seconds">00</span>
+        <div class="clock">
+          <span class="minutes">02</span>
+          <span>:</span>
+          <span class="seconds">00</span>
+        </div>
+        <div class="controls">
+          <button class="play">
+            <img src="assets/buttonPlay.svg" alt="Play Button" />
+          </button>
+          <button class="stop">
+            <img src="assets/buttonStop.svg" alt="Stop Button" />
+          </button>
+          <button class="up">
+            <img src="assets/button+.svg" alt="Up Volume Button" />
+          </button>
+          <button class="down">
+            <img src="assets/button-.svg" alt="Down Volume Button" />
+          </button>
+        </div>
       </div>
       <div class="sounds">
         <div class="col-1">
-          <div class="florest card">X</div>
-          <div class="fire card">X</div>
+          <div class="florest card">
+            <img src="assets/florest.svg" alt="Florest Sound" />
+          </div>
+          <div class="fire card">
+            <img src="assets/fire.svg" alt="Fire Sound" />
+          </div>
         </div>
         <div class="col-2">
-          <div class="store card">X</div>
-          <div class="cloud card">X</div>
+          <div class="store card">
+            <img src="assets/store.svg" alt="Store Sound" />
+          </div>
+          <div class="cloud card">
+            <img src="assets/cloud.svg" alt="Cloud-Rain Sound" />
+          </div>
         </div>
       </div>
     </main>

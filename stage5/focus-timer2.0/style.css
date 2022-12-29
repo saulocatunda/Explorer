@@ -6,12 +6,19 @@
 
 :root {
   font-size: 62.5%;
-  
+  --text-color: #323238;
+  --card-bg-color: #e1e1e6;
+  --card-bg-color-cloud: rgb(71, 199, 238, 0.8);
+  --card-bg-color-fire: rgba(231, 111, 81, 0.836);
+  --card-bg-color-store: rgba(234, 243, 113, 0.808);
+  --card-bg-color-florest: rgba(83, 228, 131, 0.774);
+  --card-shadow-color: rgb(202, 202, 202);
 }
 
 body {
   font-size: 1.6rem;
-  
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 main {
@@ -22,3 +29,64 @@ main {
   gap: clamp(10rem, 10rem + 10vw, 20rem);
 }
 
+.timer span {
+  font-size: 12.6rem;
+  line-height: 15rem;
+  color: var(--text-color);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col-1,
+.col-2 {
+  display: flex;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  width: 14rem;
+  height: 15rem;
+  margin: 0 0 3.2rem 3.2rem;
+  border-radius: 2.4rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.florest:hover {
+  background-color: var(--card-bg-color-florest);
+  transition: 0.5s;
+}
+
+.fire:hover {
+  background-color: var(--card-bg-color-fire);
+  transition: 0.5s;
+}
+
+.store:hover {
+  background-color: var(--card-bg-color-store);
+  transition: 0.5s;
+}
+
+.cloud:hover {
+  background-color: var(--card-bg-color-cloud);
+  transition: 0.5s;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sounds .card:active {
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 0 1rem var(--card-shadow-color) inset, 0 0 1rem .5rem var(--card-shadow-color);
+
+}
+
+
+/* Adicionar EFEITO DE SHAKE IMG ao licar nos botões */
