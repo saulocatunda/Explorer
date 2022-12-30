@@ -29,6 +29,11 @@ main {
   gap: clamp(10rem, 10rem + 10vw, 20rem);
 }
 
+.hide {
+  opacity: 0;
+  display: none;
+}
+
 .timer span {
   font-size: 12.6rem;
   line-height: 15rem;
@@ -86,6 +91,13 @@ button {
   transition: 0.1s ease-in-out;
   box-shadow: 0 0 1rem var(--card-shadow-color) inset,
     0 0 1rem 0.5rem var(--card-shadow-color);
+}
+
+button:active {
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 0 1rem var(--card-shadow-color) inset,
+    0 0 1rem 0.5rem var(--card-shadow-color);
+  border-radius: 9999px;
 }
 
 .sounds .card img:hover {
