@@ -1,25 +1,29 @@
-import {
-  buttonPlay,
-  buttonPause,
-  buttonStop,
-  buttonUp,
-  buttonDown,
-  buttonCloud,
-  buttonFire,
-  buttonStore,
-  buttonTree,
-  minutesDisplay,
-  secondsDisplay
-} from './elements.js'
+import { buttonPlay, buttonPause, buttonStop, buttonUp, buttonDown } from './elements.js'
 
-export default function eventListener() {
+export default function eventListener({ controls, timer }) {
   buttonPlay.addEventListener('click', () => {
-    buttonPlay.classList.add('hide')
-    buttonPause.classList.remove('hide')
+    controls.play()
+    timer.countdown()
   })
-  buttonPause.addEventListener('click', ()=> {
-    buttonPause.classList.add('hide')
-    buttonPlay.classList.remove('hide')
-  })
-}
 
+  buttonPause.addEventListener('click', () => {
+    controls.pause()
+  })
+
+  buttonStop.addEventListener('click', () => {
+    controls.stop()
+    timer.reset()
+  })
+
+  buttonUp.addEventListener('click', () => {
+    timer.timerUp()
+  })
+  buttonDown.addEventListener('click', () => {
+    timer.timerDown()
+  })
+
+  // buttonCloud.addEventListener('click', () => {})
+  // buttonTree.addEventListener('click', () => {})
+  // buttonFire.addEventListener('click', () => {})
+  // buttonStore.addEventListener('click', () => {})
+}
