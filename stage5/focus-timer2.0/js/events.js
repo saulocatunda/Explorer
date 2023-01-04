@@ -1,6 +1,17 @@
-import { buttonPlay, buttonPause, buttonStop, buttonUp, buttonDown } from './elements.js'
+import {
+  buttonPlay,
+  buttonPause,
+  buttonStop,
+  buttonUp,
+  buttonDown,
+  buttonCloud,
+  buttonFire,
+  buttonStore,
+  buttonTree
+} from './elements.js'
+import sounds from './sounds.js'
 
-export default function eventListener({ controls, timer }) {
+export default function eventListener({ controls, timer, sounds }) {
   buttonPlay.addEventListener('click', () => {
     controls.play()
     timer.countdown()
@@ -8,6 +19,7 @@ export default function eventListener({ controls, timer }) {
 
   buttonPause.addEventListener('click', () => {
     controls.pause()
+    timer.pause()
   })
 
   buttonStop.addEventListener('click', () => {
@@ -22,8 +34,20 @@ export default function eventListener({ controls, timer }) {
     timer.timerDown()
   })
 
-  // buttonCloud.addEventListener('click', () => {})
-  // buttonTree.addEventListener('click', () => {})
-  // buttonFire.addEventListener('click', () => {})
-  // buttonStore.addEventListener('click', () => {})
+  buttonCloud.addEventListener('click', () => {
+    sounds.pause()
+    sounds.cloudBgSound()
+  })
+  buttonTree.addEventListener('click', () => {
+    sounds.pause()
+    sounds.florestBgSound()
+  })
+  buttonFire.addEventListener('click', () => {
+    sounds.pause()
+    sounds.fireBgSound()
+  })
+  buttonStore.addEventListener('click', () => {
+    sounds.pause()
+    sounds.storeBgSound()
+  })
 }

@@ -1,13 +1,6 @@
 export default function Controls({
   buttonPause,
-  buttonCloud,
-  buttonDown,
-  buttonFire,
   buttonPlay,
-  buttonStop,
-  buttonStore,
-  buttonTree,
-  buttonUp
 }) {
   function play() {
     buttonPlay.classList.add('hide')
@@ -24,8 +17,8 @@ export default function Controls({
   function reset() {
     buttonPause.classList.add('hide')
     buttonPlay.classList.remove('hide')
-
   }
+
   return {
     play,
     pause,

@@ -1,4 +1,4 @@
-export default function Timer({ minutesDisplay, secondsDisplay }) {
+export default function Timer({ minutesDisplay, secondsDisplay, controls }) {
   var timeCount
   let minutesCountDown
   let secondsCountDown
@@ -12,14 +12,25 @@ export default function Timer({ minutesDisplay, secondsDisplay }) {
       if (secondsCountDown < 0 && minutesCountDown <= 0) {
         clearTimeout(timeCount)
         updateMinutes()
+        controls.stop()
         return
       } else if (secondsCountDown < 0) {
         secondsCountDown = 5
         minutesCountDown--
       }
+      if (minutesCountDown < 0) {
+        clearTimeout(timeCount)
+        updateMinutes()
+        controls.stop()
+        return
+      }
       updateDisplay()
       countdown()
     }, 1000)
+  }
+
+  function pause() {
+    clearTimeout(timeCount)
   }
 
   function reset() {
@@ -62,6 +73,7 @@ export default function Timer({ minutesDisplay, secondsDisplay }) {
     reset,
     updateMinutes,
     timerUp,
-    timerDown
+    timerDown,
+    pause
   }
 }
