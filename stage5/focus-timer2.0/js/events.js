@@ -9,7 +9,6 @@ import {
   buttonStore,
   buttonTree
 } from './elements.js'
-import sounds from './sounds.js'
 
 export default function eventListener({ controls, timer, sounds }) {
   buttonPlay.addEventListener('click', () => {

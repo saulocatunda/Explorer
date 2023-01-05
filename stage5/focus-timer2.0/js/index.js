@@ -27,7 +27,8 @@ const controls = Controls({
   buttonCloud,
   buttonFire,
   buttonTree,
-  buttonStore
+  buttonStore,
+  sounds
 })
 
 const timer = Timer({

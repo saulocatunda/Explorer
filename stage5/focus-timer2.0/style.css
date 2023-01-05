@@ -35,10 +35,13 @@ main {
 }
 
 .timer span {
-  font-size: 12.6rem;
+  /* font-size: 12.6rem; */
+  font-size: calc(8vw + 5vh);
   line-height: 15rem;
   color: var(--text-color);
 }
+
+
 
 .controls {
   display: flex;

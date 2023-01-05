@@ -11,7 +11,6 @@ export default function () {
     storeSound.pause()
   }
 
-
   function loopAudio(typeSound) {
     var currentAudio = typeSound.muted
     typeSound.loop = !currentAudio

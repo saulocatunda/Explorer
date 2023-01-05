@@ -15,7 +15,7 @@ export default function Timer({ minutesDisplay, secondsDisplay, controls }) {
         controls.stop()
         return
       } else if (secondsCountDown < 0) {
-        secondsCountDown = 5
+        secondsCountDown = 59
         minutesCountDown--
       }
       if (minutesCountDown < 0) {
@@ -54,6 +54,7 @@ export default function Timer({ minutesDisplay, secondsDisplay, controls }) {
       '2',
       0
     )
+    firstMinutes = minutesDisplay.textContent
   }
 
   function timerDown() {
