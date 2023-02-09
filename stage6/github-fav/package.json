@@ -1,0 +1,23 @@
+{
+  "name": "explorer",
+  "version": "1.0.0",
+  "description": "Olá! Esse é meu repositório que contém todos os meus códigos escritos por mim durante o curso do Explorer.",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saulocatunda/Explorer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saulocatunda/Explorer/issues"
+  },
+  "homepage": "https://github.com/saulocatunda/Explorer#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
