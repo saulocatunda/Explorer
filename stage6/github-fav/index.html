@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css" />
     <title>Gitgub Favorites</title>
   </head>
   <body>
-    <div class="app">
+    <div id="app">
       <header>
         <h1>Github Favorites</h1>
         <div class="search">
-          <label for="input-search">Usuário do Github</label>
+          <label class="sr-only" for="input-search">Usuário do Github</label>
           <input
-            type="input-search"
+            id="input-search"
             type="text"
             placeholder="Usuário do Github"
           />
@@ -34,36 +37,34 @@
         <tbody>
           <tr>
             <td class="user">
-              <img src="https://github.com/saulocatunda.png" alt="Imagem do Saulo" />
+              <img
+                src="https://github.com/saulocatunda.png"
+                alt="Imagem do Saulo"
+              />
               <a href="https://github.com/saulocatunda" target="_blank">
                 <p>Saulo Catunda</p>
                 <span>saulocatunda</span>
               </a>
             </td>
-            <td class="repositories">
-              20
-            </td>
-            <td class="fallowers">
-              1
-            </td>
-            <td><button>&times;</button></td>
+            <td class="repositories">20</td>
+            <td class="fallowers">1</td>
+            <td><button class="remove">&times;</button></td>
           </tr>
 
           <tr>
             <td class="user">
-              <img src="https://github.com/maykbrito.png" alt="Imagem do Saulo" />
+              <img
+                src="https://github.com/maykbrito.png"
+                alt="Imagem do Saulo"
+              />
               <a href="https://github.com/maykbrito" target="_blank">
-                <p>Saulo Catunda</p>
-                <span>saulocatunda</span>
+                <p>maykbrito</p>
+                <span>maikbrito</span>
               </a>
             </td>
-            <td class="repositories">
-              20
-            </td>
-            <td class="fallowers">
-              1
-            </td>
-            <td><button>&times;</button></td>
+            <td class="repositories">20</td>
+            <td class="fallowers">1</td>
+            <td><button class="remove">&times;</button></td>
           </tr>
         </tbody>
       </table>
