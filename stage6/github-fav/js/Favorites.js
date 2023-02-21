@@ -1,6 +1,7 @@
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
+    this.tbody = this.root.querySelector('table tbody')
     this.load()
   }
 
@@ -26,6 +27,13 @@ export class Favorites {
       }
     ]
   }
+
+  delete(user) {
+    const filteredEntries = this.entries.filter(
+      entry => entry.login !== user.login
+    )
+    console.log(filteredEntries)
+  }
 }
 
 export class FavoritesView extends Favorites {
@@ -40,9 +48,23 @@ export class FavoritesView extends Favorites {
 
     this.entries.forEach(user => {
       const row = this.createRow()
-      row.querySelector('.user img').src = ''
+      row.querySelector(
+        '.user img'
+      ).src = `https://github.com/${user.login}.png`
+      row.querySelector('.user img').alt = `Imagem de ${user.name}`
+      row.querySelector('.user p').textContent = user.name
+      row.querySelector('.user span').textContent = user.login
+      row.querySelector('.repositories').textContent = user.public_repos
+      row.querySelector('.fallowers').textContent = user.fallowers
 
-      console.log(row);
+      row.querySelector('.remove').onclick = () => {
+        const isOk = confirm('Tem certeza que deseja deletar essa linha?')
+        if (isOk) {
+          this.delete(user)
+        }
+      }
+
+      this.tbody.append(row)
     })
   }
 
@@ -69,9 +91,7 @@ export class FavoritesView extends Favorites {
   }
 
   removeAllTr() {
-    const tbody = this.root.querySelector('table tbody')
-
-    tbody.querySelectorAll('tr').forEach(tr => {
+    this.tbody.querySelectorAll('tr').forEach(tr => {
       tr.remove()
     })
   }
