@@ -1,38 +1,43 @@
+export class GithubUser {
+  static search(username) {
+    const endpoint = `https://api.github.com/users/${username}`
+
+    return fetch(endpoint)
+      .then(data => data.json())
+      .then(({ login, name, public_repos, fallowers }) => ({
+        login,
+        name,
+        public_repos,
+        fallowers
+      }))
+  }
+}
+
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.tbody = this.root.querySelector('table tbody')
     this.load()
+    GithubUser.search('maykbrito').then(user => console.log(user))
   }
 
   load() {
-    this.entries = [
-      {
-        login: 'saulocatunda',
-        name: 'Saulo Catunda',
-        public_repos: '25',
-        fallowers: '5899876'
-      },
-      {
-        login: 'maykbrito',
-        name: 'Mayk Brito',
-        public_repos: '76',
-        fallowers: '120000'
-      },
-      {
-        login: 'diego3g',
-        name: 'Diego Fernandes',
-        public_repos: '76',
-        fallowers: '120000'
-      }
-    ]
+    const entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
+    console.log(entries)
+    this.entries = []
+  }
+
+  async add(username) {
+    const user = await GithubUser.search(username)
+    console.log(user)
   }
 
   delete(user) {
     const filteredEntries = this.entries.filter(
       entry => entry.login !== user.login
     )
-    console.log(filteredEntries)
+    this.entries = filteredEntries
+    this.update()
   }
 }
 
@@ -41,6 +46,17 @@ export class FavoritesView extends Favorites {
     super(root)
 
     this.update()
+    this.onadd()
+  }
+
+  onadd() {
+    const addButton = this.root.querySelector('.search button')
+    addButton.onclick = () => {
+      const { value } = this.root.querySelector('.search input')
+
+      this.add(value)
+      console.log(value)
+    }
   }
 
   update() {
