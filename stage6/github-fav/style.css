@@ -60,6 +60,7 @@ header h1 {
   text-transform: uppercase;
 }
 
+
 .search {
   display: flex;
   align-items: center;
@@ -96,6 +97,10 @@ table {
 table * {
   font-size: 1.4rem;
   color: var(--text-color);
+}
+
+table span { 
+  font-weight: 400;
 }
 
 table th {
