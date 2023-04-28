@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --background-color: hsl(283, 47%, 97%);
+  --textColor1: hsl(320, 69%, 42%);
+  --textColor2: hsl(244, 38%, 28%);
+  --background-color-Dark: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+main section.intro-section {
+  background-color: var(--background-color);
+  
+}
+
+main section.content-section {
+  background-color: var(--background-color-Dark);
+}
+
+main section.contact-section {
+}
