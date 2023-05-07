@@ -9,25 +9,75 @@
   --background-color: hsl(283, 47%, 97%);
   --textColor1: hsl(320, 69%, 42%);
   --textColor2: hsl(244, 38%, 28%);
-  --background-color-Dark: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
-
+  --background-color-Dark: hsla(242, 50%, 38%, 1);
+  --backgruond-color-card: hsla(0, 0%, 100%, 1);
 }
 
 body {
   font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+}
+
+body #initialArrow {
+  margin: 3rem auto 9.3rem;
+}
+
+body #astroImg {
+  margin-bottom: 1rem;
+}
+
+body .moonImg {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 3rem;
+}
+
+body h1 {
+  color: var(--textColor1);
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+
+body p {
+  color: var(--textColor2);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+body main {
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 main section.intro-section {
   background-color: var(--background-color);
-  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main section.intro-section img {
+  margin: 0 3.2rem;
 }
 
 main section.content-section {
   background-color: var(--background-color-Dark);
 }
 
+main section.content-section article {
+  background-color: var(--backgruond-color-card);
+  margin: 5rem 4rem;
+  padding: 2.6rem;
+  border-radius: 1.2em;
+  margin: 5.3rem 4rem;
+}
+
 main section.contact-section {
+  background-color: var(--background-color);
 }

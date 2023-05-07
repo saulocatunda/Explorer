@@ -4,20 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap');
+    </style>
     <title>SemLimites</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
       <section class="intro-section">
-        <img src="content/image 11970.png" alt="Astronauta no espaço" />
+        <img
+          id="astroImg"
+          src="content/image 11970.png"
+          alt="Astronauta no espaço"
+        />
         <h1>Explore sem limites</h1>
         <p>Porque o aprendizado é contínuo</p>
-        <img src="content/Group 24.png" alt="Seta para baixo" />
+        <a href="#content"
+
+          ><img
+            id="initialArrow"
+            src="content/Group 24.png"
+            alt="Seta para baixo"
+        /></a>
       </section>
-      <section class="content-section">
+
+      <section class="content-section" id="content">
         <article>
-          <img src="content/image 11971.png" alt="Lua cheia amarela" />
+          <img
+            class="moonImg"
+            src="content/image 11971.png"
+            alt="Lua cheia amarela"
+          />
           <h1>Não pare nunca</h1>
           <p>
             Se você deseja ter sucesso nos estudos, é fundamental que vocÊ adote
@@ -26,7 +44,11 @@
           </p>
         </article>
         <article>
-          <img src="content/image 11972.png" alt="Lua cheia azul" />
+          <img
+            class="moonImg"
+            src="content/image 11972.png"
+            alt="Lua cheia azul"
+          />
           <h1>Só volta</h1>
           <p>
             Se você parou ou perdeu o ritmo em alguma atividade ou projeto,
@@ -35,7 +57,11 @@
           </p>
         </article>
         <article>
-          <img src="content/image 11973.png" alt="Lua cheia rosa" />
+          <img
+            class="moonImg"
+            src="content/image 11973.png"
+            alt="Lua cheia rosa"
+          />
           <h1>Siga seu ritmo</h1>
           <p>
             Avançar pouco a pouco mantém progresso constante em objetivos,
@@ -45,6 +71,7 @@
           </p>
         </article>
       </section>
+
       <section class="contact-section">
         <h1>Entre em contato</h1>
         <div class="userNameContact">
@@ -67,6 +94,7 @@
           <button type="submit">Enviar Mensagem</button>
         </div>
       </section>
+
       <footer>
         <small>© 2023 - Rocketseat Explorer</small>
       </footer>
