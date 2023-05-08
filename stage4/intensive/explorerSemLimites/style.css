@@ -81,3 +81,16 @@ main section.content-section article {
 main section.contact-section {
   background-color: var(--background-color);
 }
+
+main section.contact-section input,
+main section.contact-section textarea {
+  border: none;
+}
+
+main section .userNameContact, main section .userEmailContact {
+  border: .2rem var(--textColor2) solid; 
+  border-radius: .5rem;
+}
+
+main section .userEmailContact {
+}
