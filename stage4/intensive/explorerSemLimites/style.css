@@ -16,6 +16,7 @@
 body {
   font-size: 1.6rem;
   font-family: 'Mulish', sans-serif;
+  background-color: var(--background-color);
 }
 
 body #initialArrow {
@@ -29,7 +30,7 @@ body #astroImg {
 body .moonImg {
   width: 8rem;
   height: 8rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 body h1 {
@@ -37,6 +38,7 @@ body h1 {
   font-weight: 900;
   font-size: 3rem;
   line-height: 3.6rem;
+  text-align: center;
 }
 
 body p {
@@ -52,13 +54,19 @@ body main {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  width: 100vw;
 }
 
 main section.intro-section {
-  background-color: var(--background-color);
   justify-content: center;
   align-items: center;
   display: flex;
+  flex-direction: column;
+}
+
+main section.intro-section .intro-section-2 {
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -74,12 +82,14 @@ main section.content-section article {
   background-color: var(--backgruond-color-card);
   margin: 5rem 4rem;
   padding: 2.6rem;
-  border-radius: 1.2em;
+  border-radius: 1.2rem;
   margin: 5.3rem 4rem;
+  
 }
 
-main section.contact-section {
-  background-color: var(--background-color);
+main section.content-section article h1 {
+  margin-bottom: 1rem;
+  text-align: start;
 }
 
 main section.contact-section input,
@@ -87,10 +97,128 @@ main section.contact-section textarea {
   border: none;
 }
 
-main section .userNameContact, main section .userEmailContact {
-  border: .2rem var(--textColor2) solid; 
-  border-radius: .5rem;
+main section.contact-section h1 {
+  margin-top: 7rem;
 }
 
+main section .userNameContact,
 main section .userEmailContact {
+  border: 0.2rem var(--textColor2) solid;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 1.3rem;
+}
+
+main .inputSection {
+  margin-top: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+main section input::placeholder,
+main section textarea::placeholder {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: var(--textColor2);
+  opacity: 0.9;
+}
+
+main section .userNameContact input,
+main section .userEmailContact input {
+  margin: 1.2rem auto 1.2rem 1.2rem;
+  background-color: var(--background-color);
+}
+
+main section #textUser {
+  border: 0.2rem var(--textColor2) solid;
+  border-radius: 1rem;
+}
+
+main section textarea {
+  padding: 1.6rem 1.2rem;
+  background-color: var(--background-color);
+}
+
+main section.contact-section .buttonSubmit button {
+  color: white;
+  padding: 1rem 1.6rem;
+  background-color: var(--background-color-Dark);
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-align: center;
+  margin: 2.4rem 0 7rem;
+}
+
+main footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color-Dark);
+  width: 100vw;
+}
+
+main footer small {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  margin: 3.2rem auto;
+}
+
+.hide {
+  opacity: 0;
+  display: none;
+}
+@media (min-width: 700px) {
+  main section.intro-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100vw;
+  }
+
+  main section.intro-section .intro-section-2 {
+    display: flex;
+    align-items: center;
+  }
+
+  main section.content-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+
+  main section.content-section article {
+    width: 30rem;
+    height: 45rem;
+    margin: 3rem .5rem;
+  }
+
+  main section.contact-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+
+  main section.contact-section-1 {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  main section.contact-section-2 img{
+    object-fit: cover;
+  }
+
+  .hide {
+    opacity: 1;
+    display: flex;
+  }
+
 }
