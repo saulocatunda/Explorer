@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --background-color: hsl(84, 100%, 3%);
+  --background-card-color: rgb(219, 235, 0);
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--background-color);
+}
+
+body main {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .center {
+  background-color: var(--background-card-color);
+  display: grid;
+  place-content: center;
+  width: 30rem;
+  height: 30rem;
+}
+
+body .center p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1rem;
+}
+
+body .center button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border: 1px black dotted;
+  font-weight: bold;
+}
+
+body .center button:hover {
+  transition: .1s linear;
+  width: 3rem;
+  height: 3rem;
+  border: 1px black solid;
+}
