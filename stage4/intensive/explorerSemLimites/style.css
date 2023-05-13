@@ -19,9 +19,11 @@ body {
   background-color: var(--background-color);
 }
 
+
 body #initialArrow {
   width: 3.7rem;
   margin: 3rem auto 9.3rem;
+  display: flex;
 }
 
 body #astroImg {
@@ -183,29 +185,32 @@ main footer small {
     width: 100vw;
   }
 
-  body #initialArrow {
-    
-  }
-
-  main section.intro-section .intro-section-2 .arrow-link {
+  main section.intro-section .intro-section-2 .arrow {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
   }
 
   main section.intro-section .intro-section-2 {
     display: flex;
     align-items: center;
-    flex-direction: column;
     position: relative;
+    flex-direction: column;
+    justify-content: center;
     width: 30rem;
     height: 30rem;
+    margin-left: 5rem;
+  }
+
+  body #initialArrow {
+    margin: 0;
   }
 
   main section.content-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100vw;
+
   }
 
   main section.content-section article {
@@ -220,13 +225,20 @@ main footer small {
     width: 100vw;
   }
 
-  main section.contact-section-1 {
+  main section .contact-section-1 {
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 5rem;
   }
 
-  main section.contact-section-2 img {
-    object-fit: cover;
+  main section .contact-section-1 textarea {
+    width: 40vw;
+
+  }
+
+  main section .contact-section-2 img {
+    width: 40vw;
   }
 
   .hide {
