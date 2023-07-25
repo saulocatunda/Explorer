@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>teste</h1>
-  <p>teste2</p>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFav</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="assets/gitfav.svg" alt="GitFav" />
+        <label for="input-search">Usuário do github</label>
+        <input type="text" id="input-search" placeholder="Usuário do github" />
+        <button>Favoritar</button>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuários</th>
+            <th>Repositorios</th>
+            <th>Seguidores</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="users">
+              <img
+                src="https://github.com/saulocatunda.png"
+                alt="Foto do usuário"
+              />
+              <a href="https://github.com/saulocatunda">
+                <p>Saulo Catunda</p>
+                <span>saulocatunda</span>
+              </a>
+            </td>
+            <td>20</td>
+            <td>30</td>
+            <td><button>Remover</button></td>
+          </tr>
+
+          <tr>
+            <td class="users">
+              <img
+                src="https://github.com/lucascatunda.png"
+                alt="Foto do usuário"
+              />
+              <a href="https://github.com/lucascatunda">
+                <p>Lucas Catunda</p>
+                <span>lucascatunda</span>
+              </a>
+            </td>
+            <td>10</td>
+            <td>20</td>
+            <td><button>Remover</button></td>
+          </tr>
+
+          <tr>
+            <td class="users">
+              <img
+                src="https://github.com/rafaballerini.png"
+                alt="Foto do usuário"
+              />
+              <a href="https://github.com/rafaballerini">
+                <p>Rafaela Ballerini</p>
+                <span>rafaballerini</span>
+              </a>
+            </td>
+            <td>500</td>
+            <td>780</td>
+            <td><button>Remover</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
