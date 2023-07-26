@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitFav</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <title>GitFav</title>
   </head>
   <body>
     <div id="app">
       <header>
         <img src="assets/gitfav.svg" alt="GitFav" />
-        <label for="input-search">Usuário do github</label>
-        <input type="text" id="input-search" placeholder="Usuário do github" />
-        <button>Favoritar</button>
+        <div class="search">
+          <label class="sr-only" for="input-search">Usuário do github</label>
+          <input
+            type="text"
+            id="input-search"
+            placeholder="Usuário do github"
+          />
+          <button><img src="assets/star.svg" alt="Estrela" />Favoritar</button>
+        </div>
       </header>
       <table>
         <thead>
@@ -30,7 +42,7 @@
                 src="https://github.com/saulocatunda.png"
                 alt="Foto do usuário"
               />
-              <a href="https://github.com/saulocatunda">
+              <a href="https://github.com/saulocatunda" target="_blank">
                 <p>Saulo Catunda</p>
                 <span>saulocatunda</span>
               </a>
@@ -46,7 +58,7 @@
                 src="https://github.com/lucascatunda.png"
                 alt="Foto do usuário"
               />
-              <a href="https://github.com/lucascatunda">
+              <a href="https://github.com/lucascatunda" target="_blank">
                 <p>Lucas Catunda</p>
                 <span>lucascatunda</span>
               </a>
@@ -62,7 +74,7 @@
                 src="https://github.com/rafaballerini.png"
                 alt="Foto do usuário"
               />
-              <a href="https://github.com/rafaballerini">
+              <a href="https://github.com/rafaballerini" target="_blank">
                 <p>Rafaela Ballerini</p>
                 <span>rafaballerini</span>
               </a>

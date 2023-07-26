@@ -6,19 +6,63 @@
 
 :root {
   font-size: 62.5%;
+
   --background-color: #000;
-  --text-color: #FFFFFF;
-  --text-gray-color: #7C7C8A;
-  --text-title-color: #E1E1E6;
-  --button-x-color: #F75A68;
+  --text-color: #ffffff;
+  --text-gray-color: #7c7c8a;
+  --text-title-color: #e1e1e6;
+  --button-x-color: #f75a68;
+
+  --primary-font: 'Roboto', sans-serif;
 }
 
 body {
   font-size: 1.6rem;
-  
+  font-family: var(--primary-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  opacity: 0;
+}
 
 table img {
   width: 5rem;
+  border-radius: 5rem;
+}
+
+#app {
+  padding: 2rem;
+  margin: 0 auto;
+  width: 50rem;
+}
+
+#app header {
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+}
+
+.search input {
+  padding: .6rem;
+}
+
+.search button {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0.3125rem;
+  padding
+  
 }
