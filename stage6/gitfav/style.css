@@ -12,7 +12,10 @@
   --text-gray-color: #7c7c8a;
   --text-title-color: #e1e1e6;
   --button-x-color: #f75a68;
-
+  --background-color-light: rgb(6, 24, 28);
+  --background-color-dark: rgba(6, 22, 27, 0.5);
+  --background-table-header: rgb(9, 45, 56);
+  --background-button-color: #065e7c;
   --primary-font: 'Roboto', sans-serif;
 }
 
@@ -32,15 +35,11 @@ body {
   opacity: 0;
 }
 
-table img {
-  width: 5rem;
-  border-radius: 5rem;
-}
-
 #app {
   padding: 2rem;
   margin: 0 auto;
-  width: 50rem;
+  min-width: 20rem;
+  max-width: 60rem;
 }
 
 #app header {
@@ -55,7 +54,11 @@ table img {
 }
 
 .search input {
-  padding: .6rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.3125rem;
+  margin-right: 0.2rem;
+  background-color: var(--background-color-light);
 }
 
 .search button {
@@ -63,6 +66,69 @@ table img {
   align-items: center;
   border: none;
   border-radius: 0.3125rem;
-  padding
-  
+  padding: 0.45rem 1rem;
+  background-color: var(--background-button-color);
+  color: var(--text-color);
+}
+
+.search button img {
+  width: 1.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+table img {
+  width: 5rem;
+  border-radius: 5rem;
+  object-fit: contain;
+}
+
+table thead {
+  background-color: var(--background-table-header);
+  text-align: left;
+}
+
+table .users {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+table tbody tr td a {
+  text-decoration: none;
+  color: var(--text-title-color);
+}
+
+table tbody tr td a span {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+
+table tbody tr td {
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+table thead tr th {
+  padding: 1.5rem 2.5rem;
+}
+
+table thead tr th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+table thead tr th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--background-color-dark);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--background-color-light);
 }
