@@ -26,6 +26,7 @@ body {
   color: var(--text-color);
 }
 
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -71,6 +72,7 @@ body {
   color: var(--text-color);
 }
 
+
 .search button img {
   width: 1.5rem;
 }
@@ -79,6 +81,8 @@ table {
   border-collapse: collapse;
   font-weight: 700;
   line-height: 2rem;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 table img {
@@ -90,6 +94,9 @@ table img {
 table thead {
   background-color: var(--background-table-header);
   text-align: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 table .users {
@@ -131,4 +138,13 @@ table tr:nth-child(odd) {
 
 table tr:nth-child(even) {
   background-color: var(--background-color-light);
+}
+
+
+table tbody td button {
+  text-transform: none;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--button-x-color);
 }
